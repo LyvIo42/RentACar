@@ -19,8 +19,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="Core.Application">
+      <HintPath>..\..\..\corePackage\Core.Package\Core.Application\bin\Debug\net7.0\Core.Application.dll</HintPath>
+    </Reference>
     <Reference Include="Core.Persistence">
-      <HintPath>..\..\..\corePackage\Core.Packages\Core.Persistence\bin\Debug\net7.0\Core.Persistence.dll</HintPath>
+      <HintPath>..\..\..\corePackage\Core.Package\Core.Persistence\bin\Debug\net7.0\Core.Persistence.dll</HintPath>
     </Reference>
   </ItemGroup>
 

@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "infrastructure", "infrastru
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApii", "WebApii\WebApii.csproj", "{59088E1E-6A0A-4E2C-9F6F-976A1DECA75F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Persistence\Persistence.csproj", "{9B4C7007-D139-4E87-8AB5-7F7985A7FF3D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Persistence\Persistence.csproj", "{82E5F27C-B817-4DE7-A041-1139A2207F92}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{59088E1E-6A0A-4E2C-9F6F-976A1DECA75F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59088E1E-6A0A-4E2C-9F6F-976A1DECA75F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59088E1E-6A0A-4E2C-9F6F-976A1DECA75F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9B4C7007-D139-4E87-8AB5-7F7985A7FF3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9B4C7007-D139-4E87-8AB5-7F7985A7FF3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9B4C7007-D139-4E87-8AB5-7F7985A7FF3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9B4C7007-D139-4E87-8AB5-7F7985A7FF3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82E5F27C-B817-4DE7-A041-1139A2207F92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82E5F27C-B817-4DE7-A041-1139A2207F92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82E5F27C-B817-4DE7-A041-1139A2207F92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82E5F27C-B817-4DE7-A041-1139A2207F92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
