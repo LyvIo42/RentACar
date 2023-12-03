@@ -9,6 +9,11 @@
   <ItemGroup>
     <PackageReference Include="MediatR" Version="12.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.4.0" />
   </ItemGroup>
@@ -21,6 +26,12 @@
   <ItemGroup>
     <Reference Include="Core.Application">
       <HintPath>..\..\..\corePackage\Core.Package\Core.Application\bin\Debug\net7.0\Core.Application.dll</HintPath>
+    </Reference>
+    <Reference Include="Core.CrossCuttingConcerns">
+      <HintPath>..\..\..\corePackage\Core.Package\Core.CrossCuttingConcerns\bin\Debug\net7.0\Core.CrossCuttingConcerns.dll</HintPath>
+    </Reference>
+    <Reference Include="Core.Persistence">
+      <HintPath>..\..\..\corePackage\Core.Package\Core.Persistence\bin\Debug\net7.0\Core.Persistence.dll</HintPath>
     </Reference>
   </ItemGroup>
 

@@ -16,12 +16,12 @@ namespace Application.Features.Brands.Quaries.GetById
         public class GetByIdBrandQueryHandler : IRequestHandler<GetByIdBrandQuery, GetByIdBrandResponse>
         {
             private readonly IMapper _mapper;
-            private readonly IBrandRepository _brandRepository;
+            private readonly IBrandRepository _brandRepository; 
 
             public GetByIdBrandQueryHandler(IMapper mapper, IBrandRepository brandRepository)
             {
                 _mapper = mapper;
-                _brandRepository = brandRepository;
+                _brandRepository = brandRepository ; 
 
             }
 

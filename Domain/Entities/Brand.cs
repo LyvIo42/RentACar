@@ -13,14 +13,15 @@ public class Brand : Entity<Guid>
 
     public string Name { get; set; }
 
-    public Brand()
-    {
+    public virtual ICollection<Model> Models { get; set; }
 
-    }
-    public Brand(Guid id,string name)
+    public Brand() => Models = new HashSet<Model>();
+
+
+    public Brand(Guid id,string name):this()
     {
         Id = id;
-        Name = name;
+        Name  = name;
     }
 
 }
