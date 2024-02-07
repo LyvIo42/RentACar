@@ -51,6 +51,7 @@ namespace WebApii.Controllers
             DeletedBrandResponse response = await Mediator.Send(new DeleteBrandCommand { Id = id });
 
             return Ok(response);
+
         }
     }
 }
