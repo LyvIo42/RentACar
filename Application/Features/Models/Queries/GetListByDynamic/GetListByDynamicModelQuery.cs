@@ -2,7 +2,7 @@
 using Application.Services.Repositories;
 using AutoMapper;
 using Core.Application.Request;
-using Core.Application.Response;
+using Core.Application.Responses;
 using Core.Persistence.Dynamic;
 using Core.Persistence.Paging;
 using Domain.Entities;
@@ -16,12 +16,12 @@ using System.Threading.Tasks;
 
 namespace Application.Features.Models.Queries.GetListByDynamic;
 
-public class GetListByDynamicModelQuery : IRequest<GetListRepsonse<GetListByDynamicModelListItemDto>>
+public class GetListByDynamicModelQuery : IRequest<GetListResponse<GetListByDynamicModelListItemDto>>
 {
     public PageRequest PageRequest { get; set; }
     public DynamicQuery DynamicQuery { get; set; }
 
-    public class GetListByDynamicModelQueryHandler : IRequestHandler<GetListByDynamicModelQuery, GetListRepsonse<GetListByDynamicModelListItemDto>>
+    public class GetListByDynamicModelQueryHandler : IRequestHandler<GetListByDynamicModelQuery, GetListResponse<GetListByDynamicModelListItemDto>>
     {
         private readonly IModelRepository _modelRepository;
         private readonly IMapper _mapper;
@@ -31,7 +31,7 @@ public class GetListByDynamicModelQuery : IRequest<GetListRepsonse<GetListByDyna
             _modelRepository = modelRepository;
             _mapper = mapper;
         }
-        public async Task<GetListRepsonse<GetListByDynamicModelListItemDto>> Handle(GetListByDynamicModelQuery request, CancellationToken cancellationToken)
+        public async Task<GetListResponse<GetListByDynamicModelListItemDto>> Handle(GetListByDynamicModelQuery request, CancellationToken cancellationToken)
         {
             Paginate<Model> models = await _modelRepository.GetListByDynamicAsync(
                  request.DynamicQuery,
@@ -40,7 +40,7 @@ public class GetListByDynamicModelQuery : IRequest<GetListRepsonse<GetListByDyna
                  size: request.PageRequest.PageSize
                  );
 
-            var response = _mapper.Map<GetListRepsonse<GetListByDynamicModelListItemDto>>(models);
+            var response = _mapper.Map<GetListResponse<GetListByDynamicModelListItemDto>>(models);
 
             return response;
 

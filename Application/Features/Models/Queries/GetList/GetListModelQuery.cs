@@ -1,7 +1,7 @@
 ﻿using Application.Services.Repositories;
 using AutoMapper;
 using Core.Application.Request;
-using Core.Application.Response;
+using Core.Application.Responses;
 using Core.Persistence.Paging;
 using Domain.Entities;
 using MediatR;
@@ -14,11 +14,11 @@ using System.Threading.Tasks;
 
 namespace Application.Features.Models.Queries.GetList;
 
-public class GetListModelQuery : IRequest<GetListRepsonse<GetListModelListItemDto>>
+public class GetListModelQuery : IRequest<GetListResponse<GetListModelListItemDto>>
 {
     public PageRequest PageRequest { get; set; }
 
-    public class GetListModelQueryHandler : IRequestHandler<GetListModelQuery, GetListRepsonse<GetListModelListItemDto>>
+    public class GetListModelQueryHandler : IRequestHandler<GetListModelQuery, GetListResponse<GetListModelListItemDto>>
     {
         private readonly IModelRepository _modelRepository;
         private readonly IMapper _mapper;
@@ -30,7 +30,7 @@ public class GetListModelQuery : IRequest<GetListRepsonse<GetListModelListItemDt
         }
 
 
-        async Task<GetListRepsonse<GetListModelListItemDto>> IRequestHandler<GetListModelQuery, GetListRepsonse<GetListModelListItemDto>>.Handle(GetListModelQuery request, CancellationToken cancellationToken)
+        async Task<GetListResponse<GetListModelListItemDto>> IRequestHandler<GetListModelQuery, GetListResponse<GetListModelListItemDto>>.Handle(GetListModelQuery request, CancellationToken cancellationToken)
         {
             Paginate<Model> models = await _modelRepository.GetListAsync(
                 include: m => m.Include(m => m.Brand).Include(m => m.Fuel).Include(m => m.Transmission),
@@ -38,7 +38,7 @@ public class GetListModelQuery : IRequest<GetListRepsonse<GetListModelListItemDt
                 size: request.PageRequest.PageSize
                 );
 
-            var response = _mapper.Map<GetListRepsonse<GetListModelListItemDto>>(models);
+            var response = _mapper.Map<GetListResponse<GetListModelListItemDto>>(models);
 
             return response;
         }

@@ -3,7 +3,7 @@ using Application.Features.Brands.Commands.Delete;
 using Application.Features.Brands.Commands.Update;
 using Application.Features.Brands.Quaries.GetList;
 using AutoMapper;
-using Core.Application.Response;
+using Core.Application.Responses;
 using Core.Persistence.Paging;
 using Domain.Entities;
 using System;
@@ -28,7 +28,7 @@ namespace Application.Features.Brands.Profiles
             CreateMap<Brand, DeletedBrandResponse>().ReverseMap();
 
             CreateMap<Brand,GetListBrandListItemDto>().ReverseMap();
-            CreateMap<Paginate<Brand>, GetListRepsonse<GetListBrandListItemDto>>().ReverseMap();
+            CreateMap<Paginate<Brand>, GetListResponse<GetListBrandListItemDto>>().ReverseMap();
         }
     }
 }

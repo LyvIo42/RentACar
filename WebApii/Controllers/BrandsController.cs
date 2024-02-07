@@ -4,7 +4,7 @@ using Application.Features.Brands.Commands.Update;
 using Application.Features.Brands.Quaries.GetById;
 using Application.Features.Brands.Quaries.GetList;
 using Core.Application.Request;
-using Core.Application.Response;
+using Core.Application.Responses;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -13,6 +13,7 @@ namespace WebApii.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+
     public class BrandsController:BaseController
     {
         [HttpPost]
@@ -27,8 +28,8 @@ namespace WebApii.Controllers
         public async Task<IActionResult> GetList([FromQuery] PageRequest pageRequest)
         {
             GetListBrandQuery getListBrandQuery = new() { PageRequest = pageRequest };
-            GetListRepsonse<GetListBrandListItemDto> response = await Mediator.Send(getListBrandQuery);
-            return Ok(response);
+            GetListResponse<GetListBrandListItemDto> result = await Mediator.Send(getListBrandQuery);
+            return Ok(result);
         }
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById([FromRoute] Guid id)

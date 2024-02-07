@@ -12,7 +12,7 @@
 
   <ItemGroup>
     <Reference Include="Core.Persistence">
-      <HintPath>..\..\..\corePackage\Core.Package\Core.Persistence\bin\Debug\net7.0\Core.Persistence.dll</HintPath>
+      <HintPath>..\..\RentACar-Core.Packages\Core.Persistence\bin\Debug\net7.0\Core.Persistence.dll</HintPath>
     </Reference>
   </ItemGroup>
 

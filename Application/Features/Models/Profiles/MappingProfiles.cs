@@ -1,6 +1,6 @@
 ﻿using Application.Features.Models.Queries.GetList;
 using AutoMapper;
-using Core.Application.Response;
+using Core.Application.Responses;
 using Core.Persistence.Paging;
 using Domain.Entities;
 using System;

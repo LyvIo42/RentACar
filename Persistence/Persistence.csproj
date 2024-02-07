@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -20,10 +20,13 @@
 
   <ItemGroup>
     <Reference Include="Core.Application">
-      <HintPath>..\..\..\corePackage\Core.Package\Core.Application\bin\Debug\net7.0\Core.Application.dll</HintPath>
+      <HintPath>..\..\RentACar-Core.Packages\Core.Application\bin\Debug\net7.0-windows\Core.Application.dll</HintPath>
     </Reference>
     <Reference Include="Core.Persistence">
-      <HintPath>..\..\..\corePackage\Core.Package\Core.Persistence\bin\Debug\net7.0\Core.Persistence.dll</HintPath>
+      <HintPath>..\..\RentACar-Core.Packages\Core.Persistence\bin\Debug\net7.0\Core.Persistence.dll</HintPath>
+    </Reference>
+    <Reference Include="Core.Security">
+      <HintPath>..\..\RentACar-Core.Packages\Core.Security\bin\Debug\net7.0\Core.Security.dll</HintPath>
     </Reference>
   </ItemGroup>
 

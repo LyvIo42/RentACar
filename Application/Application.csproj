@@ -7,10 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Brands\Constans\" />
+    <Compile Remove="Features\Brands\Constans\**" />
+    <EmbeddedResource Remove="Features\Brands\Constans\**" />
+    <None Remove="Features\Brands\Constans\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Features\Models\Commands\" />
     <Folder Include="Features\Models\Profiles\" />
     <Folder Include="Features\Models\Rules\" />
+    <Folder Include="Features\Users\Commands\Delete\" />
+    <Folder Include="Features\Users\Commands\Update\" />
+    <Folder Include="Features\Users\Queries\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,13 +34,16 @@
 
   <ItemGroup>
     <Reference Include="Core.Application">
-      <HintPath>..\..\..\corePackage\Core.Package\Core.Application\bin\Debug\net7.0\Core.Application.dll</HintPath>
+      <HintPath>..\..\RentACar-Core.Packages\Core.Application\bin\Debug\net7.0-windows\Core.Application.dll</HintPath>
     </Reference>
     <Reference Include="Core.CrossCuttingConcerns">
-      <HintPath>..\..\..\corePackage\Core.Package\Core.CrossCuttingConcerns\bin\Debug\net7.0\Core.CrossCuttingConcerns.dll</HintPath>
+      <HintPath>..\..\RentACar-Core.Packages\Core.CrossCuttingConcerns\bin\Debug\net7.0\Core.CrossCuttingConcerns.dll</HintPath>
     </Reference>
     <Reference Include="Core.Persistence">
-      <HintPath>..\..\..\corePackage\Core.Package\Core.Persistence\bin\Debug\net7.0\Core.Persistence.dll</HintPath>
+      <HintPath>..\..\RentACar-Core.Packages\Core.Persistence\bin\Debug\net7.0\Core.Persistence.dll</HintPath>
+    </Reference>
+    <Reference Include="Core.Security">
+      <HintPath>..\..\RentACar-Core.Packages\Core.Security\bin\Debug\net7.0\Core.Security.dll</HintPath>
     </Reference>
   </ItemGroup>
 
